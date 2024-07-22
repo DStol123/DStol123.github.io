@@ -1,0 +1,83 @@
+<html>
+  <title>
+    Game - Stolbovoy
+  </title>
+  <head>
+    <script>
+      var userName = document.Quiz.nameField.value;
+      var score = 0;
+      var questions= [
+        {
+          prompt: "In which country did Taekwondo Originate? \n (A) Japan \n (B) Korea \n (C) United States \n (D) China",
+          answer: "A"
+        },
+        {
+          prompt: " \n (A) \n (B) \n (C) \n (D)",
+          answer: ""
+        },
+        {
+          prompt: " \n (A) \n (B) \n (C) \n (D)",
+          answer: ""
+        },
+        {
+          prompt: " \n (A) \n (B) \n (C) \n (D)",
+          answer: ""
+        },
+        {
+          prompt: " \n (A) \n (B) \n (C) \n (D)",
+          answer: ""
+        },
+      ];
+      function runQuiz()
+      {
+        for(i=0; i<questions.length; i++;)
+        {
+          var score = 0;
+          var response = window.prompt(questions[i].prompt);
+          if(response==questions[i].answer)
+            {score+=20;
+            alert("Correct!");}
+          else
+            {
+              alert("Incorrect.");
+            }
+          alert(userName + " Score: " + score);
+        }
+      }
+      
+      
+    </script>
+    <link rel="stylesheet" type="text/css" href="mystyle.css"/>
+  </head>
+  <table border=1 width=100% height=100%>
+    <tr class="footerHeader">
+      <th colspan=5 height=5%>
+        Stolbovoy Dennis Victor
+      </th>
+    </tr>
+    <tr height=5% class="Menu">
+      <th>
+        <a href="index.html"> Home </a> | <a href="portfolio.html"> Portfolio </a> | <a href="quiz.html"> Game </a>
+      </th>
+    </tr>
+    <tr height = 85% class="Base">
+      <th>
+        <p>
+          This page consists of a quiz.
+        </p>
+        <p>
+          After entering your name, click "Start Quiz" to begin!
+        </p>
+        <form name=Quiz>
+          <input type="text" name="nameField" value="Enter your
+ name" size=20>
+          <input type="button" name=quizStart value="Start Quiz" onclick="runQuiz()"/>
+      </th>
+    </tr>
+     <tr height=5% class="footerHeader">
+      <th colspan=5>
+        <a HREF="https://www.youtube.com/watch?v=dQw4w9WgXcQ"> My LinkedIn </a>            <div align="right"> Date of Creation: July 22, 2024 </div>
+      </th>
+    </tr>
+  </table>
+</html>
